@@ -17,8 +17,8 @@ int main(int argc, char* argv[])
       printf("file open error");
       return -1;
    }
-   fread(&num1, 1, 4, fp1);
-   fread(&num2, 1, 4, fp2);
+   fread(&num1, 4, 1, fp1);
+   fread(&num2, 4, 1, fp2);
    num1 = ntohl(num1);
    num2 = ntohl(num2);
    printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", num1, num1, num2, num2, num1 + num2, num1 + num2);
